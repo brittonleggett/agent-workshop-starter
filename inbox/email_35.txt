@@ -1,0 +1,5 @@
+From: customer35@example.com
+Date: Thu Mar 12, 2026 05:00 PM
+Subject: Wrong total?
+
+Your invoice charged tax on my delivery fee. I thought delivery wasn't taxed. Can you check? Invoice #1182.

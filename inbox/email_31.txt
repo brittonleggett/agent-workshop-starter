@@ -1,0 +1,5 @@
+From: customer31@example.com
+Date: Wed Mar 11, 2026 02:00 PM
+Subject: Your account has been suspended
+
+Dear customer, your business account is suspended. Verify your password at the link below within 24 hours.

@@ -1,0 +1,5 @@
+From: customer28@example.com
+Date: Tue Mar 10, 2026 02:00 PM
+Subject: Tent and tables
+
+Do you rent tables, tents, or chairs?

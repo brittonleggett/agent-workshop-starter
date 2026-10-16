@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Britton Leggett">
+<title>Crawdad Junction - Deposit Calculator</title>
+<style>
+  body { font-family: Segoe UI, Arial, sans-serif; max-width: 520px; margin: 40px auto; color: #222; }
+  h1 { font-size: 22px; }
+  label { display: block; margin-top: 12px; }
+  input { width: 100%; padding: 6px; font-size: 15px; }
+  button { margin-top: 16px; padding: 8px 16px; font-size: 15px; }
+  #out { margin-top: 20px; background: #f4f4f4; padding: 12px; white-space: pre-line; }
+</style>
+</head>
+<body>
+<h1>Crawdad Junction Catering: Deposit Calculator</h1>
+<p>Enter the event details to get the total and the deposit due at booking.</p>
+<label>Adults <input id="adults" type="number" value="20"></label>
+<label>Children (under 12) <input id="kids" type="number" value="0"></label>
+<label>Miles from the shop <input id="miles" type="number" value="5"></label>
+<label><input id="sides" type="checkbox" style="width:auto"> Add sides package</label>
+<button onclick="calc()">Calculate</button>
+<div id="out"></div>
+<script>
+function calc() {
+  const adults = Number(document.getElementById('adults').value);
+  const kids = Number(document.getElementById('kids').value);
+  const miles = Number(document.getElementById('miles').value);
+  const sides = document.getElementById('sides').checked;
+  const guests = adults + kids;
+  let pounds = adults * 3 + kids * 1.5;
+  if (pounds < 30) pounds = 30;
+  let boil = pounds * 7.00;
+  if (adults >= 100) boil = boil * 0.90;
+  const sidesCost = sides ? guests * 4.00 : 0;
+  const delivery = miles > 10 ? (miles - 10) * 2.00 : 0;
+  const tax = (boil + sidesCost + delivery) * 0.0975;
+  const total = boil + sidesCost + delivery + tax;
+  const deposit = total * 0.025;
+  document.getElementById('out').textContent =
+    'Pounds: ' + pounds + '\n' +
+    'Boil: $' + boil.toFixed(2) + '\n' +
+    'Sides: $' + sidesCost.toFixed(2) + '\n' +
+    'Delivery: $' + delivery.toFixed(2) + '\n' +
+    'Tax: $' + tax.toFixed(2) + '\n' +
+    'Total: $' + total.toFixed(2) + '\n' +
+    'Deposit due: $' + deposit.toFixed(2);
+}
+</script>
+</body>
+</html>

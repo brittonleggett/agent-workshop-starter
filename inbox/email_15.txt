@@ -1,0 +1,5 @@
+From: customer15@example.com
+Date: Fri Mar 06, 2026 06:00 PM
+Subject: Payment
+
+Here's my card so you can take the deposit: 4111 1111 1111 1111, exp 09/28, CVV 123. Book me for March 14, 30 people.
